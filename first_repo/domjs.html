@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <script src="hello.js"></script> -->
+	<title>Curso Js</title>
+</head>
+
+<body>
+	<h1>Empieza el documentos</h1>
+
+	<ul>
+		<li>Elemento 1</li>
+		<li>Elemento 2</li>
+		<li>Elemento 3</li>
+	</ul>
+	<!-- Un comentario en el documento -->
+	<p>Antes del script</p>
+
+	<script>
+		// for (let i = 0; i < document.body.childNodes.length; i++ ) {
+		// 	console.log(document.body.childNodes[i]);
+		// }
+		// for (let i = 0; i < document.body.children.length; i++ ) {
+		// 	console.log(document.body.children[i]);
+		// }
+		// document.body.children[1].innerHTML = "Hola";
+		const [beforeScript] = Array.from(document.body.children).filter(
+			(element) => element.textContent === "Antes del script"
+		);
+
+		console.log(beforeScript.previousElementSibling);
+		console.log(beforeScript.previousElementSibling.children);
+		console.log(beforeScript.previousElementSibling.firstElementChild);
+		console.log(beforeScript.previousElementSibling.lastElementChild); 
+	</script>
+
+	<p>Después del script</p>
+</body>
+
+</html>
